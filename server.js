@@ -8,8 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static("public"));
 
-const API_KEY = "sk-your-api-key-here"; // ⚠️ already placed, just replace if needed
-
+const API_KEY = process.env.API_KEY; // ⚠️ already placed, just replace if needed
 // generate image
 app.post("/generate", async (req, res) => {
   try {
